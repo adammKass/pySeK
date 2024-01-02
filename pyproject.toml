@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pySeK"
+version = "0.1.0"
+description = "CLI aplikácia na segmentáciu slovenského textu na vety."
+readme = "README.md"
+authors = [{ name = "Adam Kaščák", email = "adam.kascak@student.ukf.sk" }]
+dependencies = [
+    "click >= 8.1.7",
+    "colorama >= 0.4.6",
+]
+
+[project.scripts]
+Segmenter = "Segmenter.__main__:cli"
