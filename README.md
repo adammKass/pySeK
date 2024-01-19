@@ -13,22 +13,12 @@ Segmentácia viet je založená na pravidlách na pravidlách. Pravidlá využí
 
 1. Inštalácia cez **pip**
 ```
-pip install git+https://github.com/adammKass/pythonSegment-tor
+pip install git+https://github.com/adammKass/pySeK
 ```
 2. Stiahnutie navnovšej verzie cez lištu Releases
 
 ## Použitie
 
-```
-Usage: Segmenter [OPTIONS] COMMAND [ARGS]...
-
-Options:
-  --help  Show this message and exit.
-
-Commands:
-  segment  Segmentuje text zo súboru SOURCE do novovytvoreného súboru GOAL.
-```
-### Segment
 ```
 Usage: Segmenter segment [OPTIONS] SOURCE GOAL
 
