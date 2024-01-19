@@ -2,11 +2,6 @@
 
 **pySeK** je jednoduchá command-line aplikácia pre segmentáciu textu na vety pre slovenský jazyk. 
 
-## Záverečná práca
-Táto aplikácia vznikla ako praktická časť záverečnej bakálarskej práce **Segmentácia textu na vety pre slovenský jazyk** na Univerzite Konštantína Filozofa v Nitre.
-
-Link: link
-
 Segmentácia viet je založená na pravidlách na pravidlách. Pravidlá využívajú regulárne výrazy. Aplikácia obsahuje pravidlá iba pre **slovenský jazyk**.
 
 ## Inštalácia
@@ -47,3 +42,6 @@ Toto je prvá veta.
 toto je 2. veta.
 3. veta.
 ```
+
+## Záverečná práca
+Táto aplikácia vznikla ako praktická časť záverečnej bakálarskej práce **Segmentácia textu na vety pre slovenský jazyk** na Univerzite Konštantína Filozofa v Nitre.
