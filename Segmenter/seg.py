@@ -5,13 +5,13 @@ from Segmenter import segmenterClass
 
 @click.command()
 @click.argument('source', type=click.Path(exists=True), required=1)
-@click.argument('goal', type=click.Path(exists=False), required=1)
+@click.argument('target', type=click.Path(exists=False), required=1)
 def segment(source, goal):
-    """Segmentuje text zo súboru SOURCE do novovytvoreného súboru GOAL.
+    """Segmentuje text zo súboru SOURCE do novovytvoreného súboru TARGET.
 
     SOURCE je cesta k zdrojovému textovému súboru.
 
-    GOAL je cesta k cielovému textovému súboru.
+    TARGET je cesta k cielovému textovému súboru.
     """
     if not source.lower().endswith('.txt'):
         click.echo("Zdrojový súbor nie je typu .txt.",err=True)

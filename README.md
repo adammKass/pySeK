@@ -2,7 +2,7 @@
 
 **pySeK** je jednoduchá command-line aplikácia pre segmentáciu textu na vety pre slovenský jazyk. 
 
-Segmentácia viet je založená na pravidlách na pravidlách. Pravidlá využívajú regulárne výrazy. Aplikácia obsahuje pravidlá iba pre **slovenský jazyk**.
+Segmentácia viet je založená na pravidlách. Pravidlá využívajú regulárne výrazy. Aplikácia obsahuje pravidlá iba pre **slovenský jazyk**.
 
 ## Inštalácia
 
@@ -15,11 +15,11 @@ pip install git+https://github.com/adammKass/pySeK
 ## Použitie
 
 ```
-Usage: Segmenter segment [OPTIONS] SOURCE GOAL
+Usage: Segmenter segment [OPTIONS] SOURCE TARGET
 
-  Segmentuje text zo súboru SOURCE do novovytvoreného súboru GOAL.
+  Segmentuje text zo súboru SOURCE do novovytvoreného súboru TARGET.
   SOURCE je cesta k zdrojovému textovému súboru.
-  GOAL je cesta k cielovému textovému súboru.
+  TARGET je cesta k cielovému textovému súboru.
 
 Options:
   --help  Show this message and exit.
