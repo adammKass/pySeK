@@ -1,6 +1,6 @@
 import unittest
 
-import segmenterClass
+import segmenter
 
 
 class TestSegmenter(unittest.TestCase):
@@ -15,7 +15,7 @@ class TestSegmenter(unittest.TestCase):
         pass
 
     def setUp(self):
-        self.seg = segmenterClass.Segmenter()
+        self.seg = segmenter.Segmenter()
 
 
 #OSTATNÉ
