@@ -3,12 +3,13 @@ import re
 class Segmenter:
 
     def zatBod(self,text):
-        """Segmentuje vety, ktoré sú zakončené bodkov a nasleduje za nimi znak pravej zátvorky, medzera a nová veta."""
+        """Označuje hranicu vety za vetami, ktoré sú zakončené bodkov a nasleduje za nimi znak pravej zátvorky,
+        medzera a nová veta."""
         text = re.sub(r'(?<=(\.\)))\s(?=[A-ZÁČĎÉÍŇÓŠŤÚÝ]+)', '\n', text)
         return text
 
     def triBod(self,text):
-        """Segmentuje vety, ktoré sú zakončené znakom troch bodiek … a nasleduje za nimi nová veta"""
+        """Označuje hranicu vety medzi vetami, ktoré sú zakončené znakom troch bodiek … a nasleduje za nimi nová veta"""
         text = re.sub(r'(?<=(…))\s(?=[A-ZÁČĎÉÍŇÓŠŤÚÝŽ])', '\n', text)
         return text
 
@@ -18,17 +19,17 @@ class Segmenter:
         return text
 
     def listItemDvojBod(self,text):
-        """Segmentuje číslovaný zoznam dĺžky 1-2 zakončený : a nasledujúci novou vetou"""
+        """Označuje hranicu vety číslovaným zoznamom dĺžky 1-2 zakončený : a nasledujúcim novou vetou"""
         text = re.sub(r'\s(?=(\d{1,2}\:\s([A-ZÁČĎÉÍŇÓŠŤÚÝŽ]|\d)))', '\n', text)
         return text
 
     def listItemZatv(self,text):
-        """Segmentuje číslovaný zoznam dĺžky 1-2 zakončený ) a nasledujúci novou vetou"""
+        """Označuje hranicu vety za číslovaným zoznamom dĺžky 1-2 zakončený ) a nasledujúcim novou vetou"""
         text = re.sub(r'\s(?=(\d|\d{1,2}|[a-z])\)\s[A-ZÁČĎÉÍŇÓŠŤÚÝŽ])', '\n', text)
         return text
 
     def tabTriBod(self,text):
-        """Segmentuje hranice vety, za ktorými nasledujú znaky tabulátora ···"""
+        """Označuje hranicu vety medzi koncom vety a znakmi tabulátora ···"""
         text = re.sub(r'(?<=(\.|\!|\?))\s(?=\·\·\·)', '\n', text)
         return text
 
@@ -36,17 +37,17 @@ class Segmenter:
 
 
     def pRKOt(self,text):
-        """Segmentuje hranicu vety medzi priamou rečou zakončenou otáznikom a znakom úvodzoviek a novou vetou"""
+        """Označuje hranicu vety medzi priamou rečou zakončenou otáznikom a znakom úvodzoviek a novou vetou"""
         text = re.sub(r'(?<=(\?[\‘|\`|\'|\"]))\s(?=[A-ZÁČĎÉÍŇÓŠŤÚÝŽ]+)', '\n', text)
         return text
 
     def pRKVy(self,text):
-        """Segmentuje hranicu vety medzi priamou rečou zakončenou výkričníkom a znakom úvodzoviek a novou vetou"""
+        """Označuje hranicu vety medzi priamou rečou zakončenou výkričníkom a znakom úvodzoviek a novou vetou"""
         text = re.sub(r'(?<=(\![\‘|\`|\'|\"]))\s(?=[A-ZÁČĎÉÍŇÓŠŤÚÝŽ]+)', '\n', text)
         return text
 
     def pRKBod(self,text):
-        """Segmentuje hranicu vety medzi priamou rečou zakončenou bodkou a znakom úvodzoviek a novou vetou"""
+        """Označuje hranicu vety medzi priamou rečou zakončenou bodkou a znakom úvodzoviek a novou vetou"""
         text = re.sub(r'(?<=(\.[\‘|\`|\'|\"]))\s(?=[A-ZÁČĎÉÍŇÓŠŤÚÝŽ]+)', '\n', text)
         return text
 
