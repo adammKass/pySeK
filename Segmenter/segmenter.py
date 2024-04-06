@@ -2,6 +2,7 @@ import re
 
 class Segmenter:
 
+
     def zatBod(self,text):
         """Označuje hranicu vety za vetami, ktoré sú zakončené bodkov a nasleduje za nimi znak pravej zátvorky,
         medzera a nová veta."""
